@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani Juan López - Estudiante de la Universidad Pompeu Fabra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0066cc;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #004d99;
+        }
+
+        .sobre-mi, .contacto {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .foto {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004d99;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .language-selector button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .language-selector button:hover {
+            background-color: #004d99;
+        }
+    </style>
+    <script>
+        function changeLanguage(language) {
+            var elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(function(element) {
+                element.style.display = element.getAttribute('data-lang') === language ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Dani Juan López</h1>
+    <p>Estudiante de la Universidad Pompeu Fabra</p>
+</header>
+
+<div class="language-selector">
+    <button onclick="changeLanguage('es')">Castellano</button>
+    <button onclick="changeLanguage('ca')">Català</button>
+    <button onclick="changeLanguage('en')">English</button>
+</div>
+
+<nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+    <!-- Sección en Castellano -->
+    <section id="sobre-mi" class="sobre-mi" data-lang="es" style="display: block;">
+        <h2>Sobre mí</h2>
+        <img src="foto-universidad.jpg" alt="Foto de la universidad" class="foto">
+        <p>Hola, soy Dani Juan López, un estudiante de 20 años con una profunda pasión por aprender, especialmente en el campo de la tecnología. Actualmente estudio en la Universidad Pompeu Fabra y tengo experiencia en la gestión de operaciones, análisis de datos y proyectos de sostenibilidad.</p>
+        <p>He trabajado en centros vacacionales como camarero y asistente de mantenimiento, aplicando análisis detallados de productos y precios para optimizar resultados. Me encanta mejorar mis habilidades técnicas en mi tiempo libre, usando herramientas como Excel, Python y R.</p>
+    </section>
+
+    <!-- Secció en Català -->
+    <section id="sobre-mi" class="sobre-mi" data-lang="ca" style="display: none;">
+        <h2>Sobre mi</h2>
+        <img src="foto-universidad.jpg" alt="Foto de la universitat" class="foto">
+        <p>Hola, sóc en Dani Juan López, un estudiant de 20 anys amb una profunda passió per aprendre, especialment en el camp de la tecnologia. Actualment estudio a la Universitat Pompeu Fabra i tinc experiència en la gestió d’operacions, l'anàlisi de dades i projectes de sostenibilitat.</p>
+        <p>He treballat en centres vacacionals com a cambrer i assistent de manteniment, aplicant anàlisis detallades de productes i preus per optimitzar resultats. M'encanta millorar les meves habilitats tècniques en el meu temps lliure, utilitzant eines com Excel, Python i R.</p>
+    </section>
+
+    <!-- Section in English -->
+    <section id="sobre-mi" class="sobre-mi" data-lang="en" style="display: none;">
+        <h2>About Me</h2>
+        <img src="foto-universidad.jpg" alt="Photo of the university" class="foto">
+        <p>Hello, I’m Dani Juan López, a 20-year-old student with a deep passion for learning, especially in the field of technology. I’m currently studying at Pompeu Fabra University and have experience in operations management, data analysis, and sustainability projects.</p>
+        <p>I’ve worked at holiday centers as a waiter and maintenance assistant, applying detailed product and pricing analysis to optimize results. I love improving my technical skills in my free time, using tools like Excel, Python, and R.</p>
+    </section>
+
+    <!-- Sección de Contacto en los tres idiomas -->
+    <section id="contacto" class="contacto" data-lang="es" style="display: block;">
+        <h2>Contacto</h2>
+        <p>Email: danijuanlopez15@gmail.com</p>
+        <p>Teléfono: 684 12 24 63</p>
+        <p>Dirección: Travesía Carril, 2, 6-3 (Girona)</p>
+    </section>
+
+    <section id="contacto" class="contacto" data-lang="ca" style="display: none;">
+        <h2>Contacte</h2>
+        <p>Email: danijuanlopez15@gmail.com</p>
+        <p>Telèfon: 684 12 24 63</p>
+        <p>Adreça: Travesía Carril, 2, 6-3 (Girona)</p>
+    </section>
+
+    <section id="contacto" class="contacto" data-lang="en" style="display: none;">
+        <h2>Contact</h2>
+        <p>Email: danijuanlopez15@gmail.com</p>
+        <p>Phone: 684 12 24 63</p>
+        <p>Address: Travesía Carril, 2, 6-3 (Girona)</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Dani Juan López. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
